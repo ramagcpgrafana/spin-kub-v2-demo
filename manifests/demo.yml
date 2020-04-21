@@ -53,7 +53,9 @@ spec:
   selector:
     source: demo
     app: spinnaker
+  type: NodePort
   ports:
   - protocol: TCP
     port: 80
+    nodePort: 32333
     targetPort: 8000
