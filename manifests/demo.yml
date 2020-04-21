@@ -8,7 +8,7 @@ data:
 
 ---
 
-apiVersion: apps/v1
+apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
   name: spinnaker-demo
@@ -53,9 +53,7 @@ spec:
   selector:
     source: demo
     app: spinnaker
-  type: NodePort
   ports:
   - protocol: TCP
     port: 80
-    nodePort: 32331
     targetPort: 8000
