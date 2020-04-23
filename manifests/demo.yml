@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: spinnaker-demo-config
+  name: spinnaker-demo-config-1
   namespace: default
 data:
   NEW_FEATURE: "true"
@@ -40,7 +40,7 @@ spec:
             port: 8000
         envFrom:
         - configMapRef:
-            name: spinnaker-demo-config
+            name: spinnaker-demo-config-1
 
 ---
 
@@ -57,5 +57,5 @@ spec:
   ports:
   - protocol: TCP
     port: 80
-    nodePort: 32332
+    nodePort: 32334
     targetPort: 8000
