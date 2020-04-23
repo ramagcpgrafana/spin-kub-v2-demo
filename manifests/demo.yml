@@ -32,6 +32,7 @@ spec:
       containers:
       - name: primary
         image: index.docker.io/tusharstudy2020/spinnakerimages
+        imagePullPolicy: Always
         ports:
         - containerPort: 8000
         readinessProbe:
